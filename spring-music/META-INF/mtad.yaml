@@ -10,6 +10,7 @@ modules:
       - name: spring-music-news-url
         properties:
           NEWS_URL: ~{url}
+      - name: spring-music-external-news
     parameters:
       memory: 512M
       disk-quota: 512M 
@@ -32,3 +33,9 @@ resources:
     parameters:
       service: postgresql
       service-plan: v9.4-dev-large
+
+  - name: spring-music-external-news
+    type: org.cloudfoundry.user-provided-service
+    parameters:
+      config:
+        url: https://spring-music-external-news.cfapps.sap.hana.ondemand.com/news
