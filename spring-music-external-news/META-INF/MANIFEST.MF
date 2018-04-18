@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+
+Name: spring-music-news/
+MTA-Module: spring-music-external-news
+
+Name: META-INF/mtad.yaml
+

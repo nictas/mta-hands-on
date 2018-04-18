@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+
+Name: build/libs/spring-music.jar
+MTA-Module: spring-music-web
+
+Name: spring-music-news/
+MTA-Module: spring-music-news
+
+Name: META-INF/mtad.yaml
+
