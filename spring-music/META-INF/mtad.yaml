@@ -12,7 +12,13 @@ modules:
       disk-quota: 512M 
     properties:
       POPULATE_ALBUM_REPOSITORY: true
-      
+
+  - name: spring-music-news
+    type: javascript.nodejs
+    parameters:
+      memory: 256M
+      disk-quota: 256M
+
 resources:
   - name: spring-music-db
     type: org.cloudfoundry.managed-service
