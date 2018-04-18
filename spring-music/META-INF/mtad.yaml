@@ -1,1 +1,21 @@
-#TODO
+_schema-version: "3.1.0"
+ID: spring-music
+version: 1.0.0
+
+modules:
+  - name: spring-music-web
+    type: java.tomcat
+    requires:
+      - name: spring-music-db
+    parameters:
+      memory: 512M
+      disk-quota: 512M 
+    properties:
+      POPULATE_ALBUM_REPOSITORY: true
+      
+resources:
+  - name: spring-music-db
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: postgresql
+      service-plan: v9.4-dev-large
