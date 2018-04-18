@@ -7,6 +7,9 @@ modules:
     type: java.tomcat
     requires:
       - name: spring-music-db
+      - name: spring-music-news-url
+        properties:
+          NEWS_URL: ~{url}
     parameters:
       memory: 512M
       disk-quota: 512M 
@@ -18,6 +21,10 @@ modules:
     parameters:
       memory: 256M
       disk-quota: 256M
+    provides:
+      - name: spring-music-news-url
+        properties:
+          url: ${default-url}/news
 
 resources:
   - name: spring-music-db
