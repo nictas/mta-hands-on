@@ -1,1 +1,14 @@
-#TODO
+_schema-version: "3.1.0"
+ID: spring-music-external-news
+version: 1.0.0
+
+modules:
+  - name: spring-music-external-news
+    type: javascript.nodejs
+    provides:
+      - name: spring-music-external-news
+        public: true
+        properties:
+          type: spring-music-external-news
+          name: External
+          url: ${default-url}/news
